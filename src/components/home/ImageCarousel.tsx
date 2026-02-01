@@ -23,7 +23,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="py-16 overflow-hidden">
+    <section className="py-16 overflow-hidden bg-card">
       {/* Row 1 - Moving Right */}
       <div className="relative mb-4">
         <div className="flex marquee-track">

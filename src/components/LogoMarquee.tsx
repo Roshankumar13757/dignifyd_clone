@@ -13,7 +13,7 @@ interface LogoMarqueeProps {
 
 const LogoMarquee = ({ label = "Trusted by global brands across lifestyle, SaaS, fintech & enterprise", reverse = false }: LogoMarqueeProps) => {
   return (
-    <div className="py-12">
+    <div className="py-12 bg-background">
       {label && (
         <p className="text-center text-muted-foreground text-sm mb-8">{label}</p>
       )}

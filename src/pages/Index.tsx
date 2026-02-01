@@ -11,17 +11,22 @@ import ServicesSection from "@/components/home/ServicesSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <ParallaxVideoSection />
-      <LogoMarquee />
-      <ApproachSection />
-      <ImageCarousel />
-      <ValueSection />
-      <CapabilitiesSection />
-      <ServicesSection />
-      <Footer />
+    <div className="bg-background">
+      <div className="fixed inset-0 z-0">
+        <HeroSection />
+      </div>
+      <div className="relative z-10">
+        <Navbar />
+        <div className="min-h-screen" />
+        <ParallaxVideoSection />
+        <LogoMarquee />
+        <ApproachSection />
+        <ImageCarousel />
+        <ValueSection />
+        <CapabilitiesSection />
+        <ServicesSection />
+        <Footer />
+      </div>
     </div>
   );
 };
