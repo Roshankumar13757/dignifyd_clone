@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dignifyd Digital Design System */
+
+@layer base {
+  :root {
+    /* Core Colors - Dark Theme */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
+    
+    /* Primary - Teal/Cyan Gradient */
+    --primary: 168 84% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Muted */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    
+    /* Accent */
+    --accent: 174 72% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 18%;
+    --input: 0 0% 15%;
+    --ring: 168 84% 40%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(180deg, hsl(174 72% 45% / 0.4) 0%, transparent 60%);
+    --gradient-teal: linear-gradient(135deg, hsl(168 84% 40%) 0%, hsl(186 84% 45%) 100%);
+    --gradient-hero: radial-gradient(ellipse 80% 50% at 50% 0%, hsl(174 72% 45% / 0.3) 0%, transparent 60%);
+    
+    /* Typography */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(174 72% 45% / 0.2);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 168 84% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 168 84% 40%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+  }
+  
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+@layer components {
+  /* Gradient Background Effect */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  /* Floating Nav */
+  .nav-floating {
+    @apply backdrop-blur-xl bg-background/80 border border-border/50;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Marquee Animation */
+  .marquee-track {
+    animation: marquee 30s linear infinite;
+  }
+  
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  
+  .marquee-track-reverse {
+    animation: marquee-reverse 30s linear infinite;
+  }
+  
+  .marquee-track-reverse:hover {
+    animation-play-state: paused;
+  }
+  
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-teal);
+  }
+  
+  /* Service card */
+  .service-card {
+    @apply border border-border/50 rounded-2xl p-8 transition-all duration-300;
+    background: linear-gradient(180deg, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 100%);
+  }
+  
+  .service-card:hover {
+    @apply border-primary/30;
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* CTA Button Primary */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
+    background: var(--gradient-teal);
+    color: hsl(var(--foreground));
+  }
+  
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* CTA Button Secondary */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300;
+    @apply border border-border bg-transparent text-foreground;
+  }
+  
+  .btn-secondary:hover {
+    @apply border-foreground/50 bg-foreground/5;
+  }
+  
+  /* Section Headers */
+  .section-label {
+    @apply text-sm font-medium tracking-wider uppercase text-muted-foreground mb-4;
+  }
+  
+  .section-title {
+    @apply text-4xl md:text-5xl lg:text-6xl font-medium leading-tight;
+  }
+  
+  .section-title-serif {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  /* Feature Item */
+  .feature-item {
+    @apply border-l-2 border-primary/50 pl-6 py-2;
+  }
+  
+  /* Input styling */
+  .input-dark {
+    @apply bg-secondary border-border text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary;
+  }
+  
+  /* Page Hero Gradient */
+  .page-hero-gradient {
+    background: linear-gradient(180deg, hsl(174 72% 45% / 0.25) 0%, hsl(174 72% 45% / 0.1) 30%, transparent 70%);
+  }
+}
+
+@layer utilities {
+  /* Fade in animation */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay-1 {
+    animation: fadeIn 0.6s ease-out 0.1s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.6s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .animate-fade-in-delay-3 {
+    animation: fadeIn 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
