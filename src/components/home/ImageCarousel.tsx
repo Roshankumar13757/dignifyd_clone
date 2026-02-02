@@ -23,16 +23,29 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <section className="py-16 overflow-hidden bg-card">
+    <section className="py-20 overflow-hidden bg-black relative" style={{ perspective: '1000px' }}>
+      {/* Left fade overlay */}
+      <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+      
+      {/* Right fade overlay */}
+      <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-black via-black/80 to-transparent z-10 pointer-events-none"></div>
+
       {/* Row 1 - Moving Right */}
-      <div className="relative mb-4">
+      <div className="relative mb-6" style={{ transform: 'rotateX(10deg) rotateZ(2deg)', transformStyle: 'preserve-3d' }}>
         <div className="flex marquee-track">
           {[...row1, ...row1, ...row1, ...row1].map((img, index) => (
-            <div key={`r1-${index}`} className="flex-shrink-0 px-2">
+            <div 
+              key={`r1-${index}`} 
+              className="flex-shrink-0 px-4"
+              style={{ transform: 'skewX(-2deg)' }}
+            >
               <img
                 src={img}
                 alt={`Work ${index + 1}`}
-                className="w-64 h-44 object-cover rounded-xl"
+                className="w-96 h-56 object-cover rounded-3xl"
+                style={{ 
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+                }}
               />
             </div>
           ))}
@@ -40,14 +53,21 @@ const ImageCarousel = () => {
       </div>
 
       {/* Row 2 - Moving Left */}
-      <div className="relative mb-4">
+      <div className="relative mb-6" style={{ transform: 'rotateX(10deg) rotateZ(2deg)', transformStyle: 'preserve-3d' }}>
         <div className="flex marquee-track-reverse">
           {[...row2, ...row2, ...row2, ...row2].map((img, index) => (
-            <div key={`r2-${index}`} className="flex-shrink-0 px-2">
+            <div 
+              key={`r2-${index}`} 
+              className="flex-shrink-0 px-4"
+              style={{ transform: 'skewX(2deg)' }}
+            >
               <img
                 src={img}
                 alt={`Work ${index + 1}`}
-                className="w-64 h-44 object-cover rounded-xl"
+                className="w-96 h-56 object-cover rounded-3xl"
+                style={{ 
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+                }}
               />
             </div>
           ))}
@@ -55,14 +75,21 @@ const ImageCarousel = () => {
       </div>
 
       {/* Row 3 - Moving Right */}
-      <div className="relative">
+      <div className="relative" style={{ transform: 'rotateX(10deg) rotateZ(2deg)', transformStyle: 'preserve-3d' }}>
         <div className="flex marquee-track">
           {[...row3, ...row3, ...row3, ...row3].map((img, index) => (
-            <div key={`r3-${index}`} className="flex-shrink-0 px-2">
+            <div 
+              key={`r3-${index}`} 
+              className="flex-shrink-0 px-4"
+              style={{ transform: 'skewX(-2deg)' }}
+            >
               <img
                 src={img}
                 alt={`Work ${index + 1}`}
-                className="w-64 h-44 object-cover rounded-xl"
+                className="w-96 h-56 object-cover rounded-3xl"
+                style={{ 
+                  boxShadow: '0 20px 60px rgba(0,0,0,0.5)',
+                }}
               />
             </div>
           ))}

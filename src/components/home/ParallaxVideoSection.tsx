@@ -11,7 +11,7 @@ const ParallaxVideoSection = () => {
   const yOffset = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <section className="pb-24 bg-background">
+    <section className="bg-background">
       <div className="container mx-auto px-6">
         <section
           ref={sectionRef}
@@ -31,16 +31,13 @@ const ParallaxVideoSection = () => {
           playsInline
           preload="auto"
           className="w-full h-full object-cover"
-          style={{
-            borderRadius: "48px",
-          }}
         >
           <source src="/NacGU1jpcigP7QziqhqSofnEM.webm" type="video/webm" />
           Your browser does not support the video tag.
         </video>
 
         {/* Subtle Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20 rounded-[48px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/20" />
       </motion.div>
 
       {/* Centered Logo/Text */}

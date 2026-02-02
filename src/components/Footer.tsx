@@ -49,13 +49,8 @@ const Footer = () => {
       >
         {/* Re-enable pointer events for interactive elements */}
         <div className="pointer-events-auto h-full">
-          {/* Background video with mask */}
-          <div 
-            className="absolute inset-0 opacity-30"
-            style={{
-              maskImage: 'linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 30%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 90%)',
-            }}
-          >
+          {/* Background video */}
+          <div className="absolute inset-0 opacity-100">
             <video
               ref={videoRef}
               autoPlay
@@ -81,30 +76,35 @@ const Footer = () => {
           {/* Footer content */}
           <div className="relative z-10 h-full flex flex-col items-center justify-between py-16 px-6">
             {/* Main CTA Section */}
-            <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8">
-              <h1 className="text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight text-white leading-[0.8]">
-                Are you<span className="italic font-serif font-normal"> ready?</span>
-              </h1>
-              
-              <p className="text-2xl md:text-3xl text-gray-400 font-medium max-w-2xl">
-                This could be the start of something big.
-              </p>
+            <div className="flex-1 flex flex-col items-center justify-center text-center space-y-8 relative px-[100px]">
+              {/* Content positioned above video */}
+              <div className="relative z-10 w-full max-w-4xl space-y-8">
+                <h1 className="text-7xl md:text-8xl lg:text-9xl font-medium tracking-tight text-white leading-[0.8]">
+                  Are you<span className="italic font-serif font-normal"> ready?</span>
+                </h1>
+                
+                <p className="text-2xl md:text-3xl text-gray-400 font-medium max-w-2xl mx-auto">
+                  This could be the start of something big.
+                </p>
 
-              <Link
-                to="/contact"
-                className="mt-8 px-10 py-4 text-white text-xl font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
-                style={{
-                  backgroundColor: 'rgb(1, 141, 135)',
-                  backdropFilter: 'blur(10px)',
-                  boxShadow: '0 4px 10px -2px rgba(0, 0, 0, 0.05), 0 2px 2px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(1, 141, 135, 0.12)',
-                }}
-              >
-                Book a call
-              </Link>
+                <div className="pt-4">
+                  <Link
+                    to="/contact"
+                    className="inline-block px-10 py-4 text-white text-xl font-medium rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                    style={{
+                      backgroundColor: 'rgb(1, 141, 135)',
+                      backdropFilter: 'blur(10px)',
+                      boxShadow: '0 4px 10px -2px rgba(0, 0, 0, 0.05), 0 2px 2px -1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(1, 141, 135, 0.12)',
+                    }}
+                  >
+                    Book a call
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Bottom Links */}
-            <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="bg-black w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
               {/* Navigation Links */}
               <div className="flex flex-wrap gap-6 justify-center md:justify-start">
                 <Link 

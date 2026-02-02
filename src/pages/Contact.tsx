@@ -145,43 +145,14 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Cards */}
+      {/* Full Width Image */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="service-card text-center"
-            >
-              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-              <p className="text-muted-foreground text-sm">hello@dignifyd.digital</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="service-card text-center"
-            >
-              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-              <p className="text-muted-foreground text-sm">+91 98765 43210</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="service-card text-center"
-            >
-              <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
-              <p className="text-muted-foreground text-sm">New Delhi, India</p>
-            </motion.div>
-          </div>
+          <img 
+            src="/osQ9s6AS8wfSeIRcAwf0xivot3Q.png" 
+            alt="Contact visual" 
+            className="w-full h-auto object-cover"
+          />
         </div>
       </section>
 
