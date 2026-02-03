@@ -37,32 +37,37 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 page-hero-gradient">
-        <div className="container mx-auto px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight mb-8"
-          >
-            What we do, <span className="font-serif italic">delivered well.</span>
-          </motion.h1>
+      <section className="pt-24 bg-black text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="rounded-[3rem] p-12 md:p-16">
+            <div className="text-center">
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-tight mb-8"
+              >
+                What we do, <span className="font-serif italic">delivered well.</span>
+              </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto"
-          >
-            Our services combine strategic thinking, thoughtful design, and performance-driven execution to help brands build clarity, scale efficiently, and grow with purpose.
-          </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-base md:text-lg text-gray-400 max-w-4xl mx-auto leading-relaxed"
+              >
+                Our services combine strategic thinking, thoughtful design, and performance-driven execution to help brands build clarity, scale efficiently, and grow with purpose.
+              </motion.p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <section className="bg-black text-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="rounded-[3rem] p-12 md:p-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.href}
@@ -75,7 +80,7 @@ const Services = () => {
                   to={service.href}
                   className="group block overflow-hidden rounded-2xl"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[3/2] overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
@@ -83,14 +88,15 @@ const Services = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
                   </div>
-                  <div className="pt-4 pb-2">
-                    <h3 className="text-lg md:text-xl font-medium group-hover:text-primary transition-colors">
+                  <div className="pt-3 pb-2">
+                    <h3 className="text-sm md:text-base font-medium group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
                   </div>
                 </Link>
               </motion.div>
             ))}
+            </div>
           </div>
         </div>
       </section>

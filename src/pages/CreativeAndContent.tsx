@@ -1,62 +1,202 @@
-import ServicePageLayout from "@/components/ServicePageLayout";
-import ServiceContentSection from "@/components/ServiceContentSection";
+import { motion } from "framer-motion";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const CreativeAndContent = () => {
   return (
-    <ServicePageLayout
-      title="Creative & Content That Connects"
-      description="We craft compelling creative content that tells your brand story, captivates audiences, and drives engagement across digital platforms. From visual design to strategic storytelling, our approach blends creativity with purpose to make every piece of content meaningful and effective."
+    <div className="min-h-screen bg-black">
+      <Navbar />
+
+{/* Hero Section */}
+<section className="relative pt-32 pb-20 bg-gradient-to-br from-teal-900 via-teal-950 to-black min-h-[70vh] flex items-center justify-center overflow-hidden">
+  {/* Black fade from bottom */}
+  <div 
+    className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+    style={{
+      background: 'linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
+    }}
+  />
+  
+  <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+    <motion.h1
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white mb-8"
+      style={{ letterSpacing: '-0.05em', lineHeight: '1.1em' }}
     >
-      <ServiceContentSection
-        sectionTitle="Creative Strategy & Execution"
-        image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-        items={[
-          {
-            title: "Visual Storytelling",
-            description: "We design eye-catching visuals — from graphics to videos — that communicate your message clearly and memorably."
-          },
-          {
-            title: "Strategic Content Creation",
-            description: "We produce written and multimedia content tailored to your audience — including social posts, blogs, website copy, and campaign materials — aligned with your goals."
-          },
-          {
-            title: "Brand-Led Messaging",
-            description: "We define and refine your brand voice to ensure every piece of content speaks with clarity, consistency, and impact."
-          }
-        ]}
-      />
+      <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
+        Creative & 
+      </span>
+      <br />
+      <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
+        Content That 
+      </span>
+      <br />
+      <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
+        Connects
+      </span>
+    </motion.h1>
 
-      <ServiceContentSection
-        sectionTitle="Creative Systems That Scale"
-        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop"
-        imagePosition="right"
-        items={[
-          {
-            title: "Integrated Campaign Support",
-            description: "Our creative output is designed to work seamlessly across platforms — social, web, email, and ads — for cohesive messaging."
-          },
-          {
-            title: "Optimisation & Insights",
-            description: "We leverage performance data to refine creative and content over time, ensuring better engagement and stronger results."
-          },
-          {
-            title: "Multi-Format Content Delivery",
-            description: "From static visuals and animations to long-form storytelling and short video clips — we support diverse formats based on your audience and channels."
-          }
-        ]}
-      />
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+      className="text-gray-300 text-base md:text-lg max-w-5xl mx-auto leading-relaxed"
+      style={{ letterSpacing: '-0.02em', lineHeight: '160%' }}
+    >
+      We craft compelling creative content that tells your brand story, captivates audiences, and drives engagement across digital platforms. From visual design to strategic storytelling, our approach blends creativity with purpose to make every piece of content meaningful and effective. 
+    </motion.p>
+  </div>
+</section>
 
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-6">Why Creative Matters</h2>
-            <p className="text-muted-foreground text-lg">
-              In a crowded digital landscape, strong creative sets you apart. It builds attention, communicates value, and creates emotional connection — turning passive viewers into active customers.
-            </p>
+      {/* Performance Led Marketing Strategy */}
+      <section className="py-20 bg-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            {/* Images Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-6"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                alt="User Experience"
+                className="w-full h-auto rounded-2xl object-cover shadow-xl"
+              />
+            </motion.div>
+
+            {/* Text Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-10"
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-4xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.05em' }}>
+                Creative Strategy & Execution
+              </h2>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
+                  Visual Storytelling
+                </h3>
+                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+                 We design eye-catching visuals — from graphics to videos — that communicate your message clearly and memorably. 
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
+                  Strategic Content Creation
+                </h3>
+                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+                 We produce written and multimedia content tailored to your audience — including social posts, blogs, website copy, and campaign materials — aligned with your goals. 
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
+                  Brand-Led Messaging
+                </h3>
+                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+                 We define and refine your brand voice to ensure every piece of content speaks with clarity, consistency, and impact. 
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
-    </ServicePageLayout>
+
+      {/* Optimisation & Long Term Growth Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Text Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              className="space-y-10 lg:order-1"
+            >
+              <h2 className="text-3xl md:text-4xl lg:text-4xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.05em' }}>
+                Creative Systems That Scale 
+              </h2>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
+                  Integrated Campaign Support
+                </h3>
+                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+                 Our creative output is designed to work seamlessly across platforms — social, web, email, and ads — for cohesive messaging.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
+                 Optimisation & Insights
+                </h3>
+                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+                 We leverage performance data to refine creative and content over time, ensuring better engagement and stronger results. 
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
+                  Multi-Format Content Delivery
+                </h3>
+                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+                 From static visuals and animations to long-form storytelling and short video clips — we support diverse formats based on your audience and channels
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Images Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:order-2"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop"
+                alt="Design Systems"
+                className="w-full h-auto rounded-2xl object-cover shadow-xl"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Why It Matters Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-6xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="text-center max-w-4xl mx-auto"
+          >
+             <h2 className="text-3xl md:text-4xl lg:text-4xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.05em' }}>
+                Why Creative & Content Matters
+              </h2>
+            <p className="text-gray-400 text-base md:text-lg leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
+             Creative content isn’t just about looking good — it’s about communicating purposefully. The right creative strategy builds emotional connection, improves brand recall, and drives measurable engagement in today’s noisy digital landscape.  
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
