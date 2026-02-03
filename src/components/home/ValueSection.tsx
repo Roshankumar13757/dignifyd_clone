@@ -78,7 +78,7 @@ const ValueSection = () => {
                 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop&crop=face"
+                  src="https://framerusercontent.com/images/DCtW3lLtTM35ABrYoEuBt0qjC8.jpg?width=2268&height=4032"
                   alt="Paavan Ahuja"
                   className="w-full h-full object-cover object-center"
                 />

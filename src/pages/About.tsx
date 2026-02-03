@@ -5,34 +5,94 @@ import LogoMarquee from "@/components/LogoMarquee";
 
 const team = [
   {
+    name: "Akshita Malik",
+    role: "Graphics Designer",
+    image: "https://framerusercontent.com/images/lJNh5UBNMKTUklAVu5xj6ZuJIU.jpeg?width=1402&height=1784",
+  },
+  {
+    name: "Dimpy Kharb",
+    role: "Graphics Designer",
+    image: "https://framerusercontent.com/images/UQE6L2hcUnKd7rRDY9L3OsycKo.jpg?width=2268&height=4032",
+  },
+  {
+    name: "rudraksh Verma",
+    role: "Video Editor & Motion Graphics Designer",
+    image: "https://framerusercontent.com/images/FLev0HsRek9LVpNHZUN4tYefraE.jpg?width=3024&height=2742",
+  },
+  {
+    name: "Mohammad Sarfaraj",
+    role: "Video Editor & Motion Graphics Designer",
+    image: "https://framerusercontent.com/images/rT1eWK73UrDFw0njgkzynGWRA.jpg?width=3024&height=2855",
+  },
+  {
+    name: "Deepika Rawat",
+    role: "product Designer",
+    image: "https://framerusercontent.com/images/9EII2f4b98g01a2TTDTCk3jBEU.jpg?width=2268&height=4032",
+  },
+  {
+    name: "Shivani Sharma",
+    role: "Influencer Marketing Manager",
+    image: "https://framerusercontent.com/images/mFFRlWhgVC7sgoR4fzWY2MexTuE.jpg?width=2268&height=4032",
+  },
+  {
+    name: "Utsav Tyagi",
+    role: "Sales & Marketing Executive",
+    image: "https://framerusercontent.com/images/GGAhSL4xFb0mSs7H0olJXKrvoWE.jpg?width=2268&height=4032",
+  },
+  {
+    name: "Ashish Tyagi",
+    role: "Sales Executive",
+    image: "https://framerusercontent.com/images/4KlqiGl4HOKtsLQXvVvDl90sMMw.jpg?width=2268&height=4032",
+  },
+  {
+    name: "Peehu Gupta",
+    role: "Growth Maketing Executive",
+    image: "https://framerusercontent.com/images/ZnmU6KfWeNClmiFBYmEYSfaD6k.jpg?width=2140&height=2611",
+  },
+  {
+    name: "Krishna Gupta",
+    role: "Sales & Marketing Specialist",
+    image: "https://framerusercontent.com/images/szekSzpQqYv58YzfG9crz9Q3SQ.jpg?width=2268&height=4032",
+  },
+  {
+    name: "Maahi Namadev",
+    role: "Digital marketing Executive",
+    image: "https://framerusercontent.com/images/ya7LoZbvqNkzgsUS1lJYRGIXIU.jpg?width=2268&height=4032",
+  },
+  {
+    name: "Nandini Gupta",
+    role: "Digital marketing Executive",
+    image: "https://framerusercontent.com/images/UCkLaukvsXBquWul3Qq8FVyBnx0.jpg?width=2268&height=4032",
+  },
+  {
     name: "Paavan Ahuja",
     role: "Chief Executive Officer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face",
+    image: "https://framerusercontent.com/images/DCtW3lLtTM35ABrYoEuBt0qjC8.jpg?width=2268&height=4032",
   },
   {
     name: "Udaytanshu Aggarwal",
     role: "Financial & Growth Advisor",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=500&fit=crop&crop=face",
+    image: "https://framerusercontent.com/images/0fGrCd9nA2HPeC5F3r48EEU0hw.jpg?width=2119&height=3867",
   },
   {
     name: "Siddharth Chawla",
     role: "Design & Innovation Associate",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=500&fit=crop&crop=face",
+    image: "https://framerusercontent.com/images/6vQLKCrbJ5Zj4kEiUPzTSwWxmLQ.jpg?width=2268&height=4032",
   },
   {
     name: "Pratyush Jha",
     role: "SEO Specialist",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=500&fit=crop&crop=face",
+    image: "https://framerusercontent.com/images/OSU29EXIYnoRuF7xb9vx4RbgOQ.jpg?width=3024&height=2949",
   },
   {
     name: "Raj Yadav",
     role: "Senior Wordpress Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=500&fit=crop&crop=face",
+    image: "https://framerusercontent.com/images/WtB42PjMwwwcc2MtNqkUWhziKk.jpg?width=2268&height=4032",
   },
   {
     name: "Bhavya Tiwari",
     role: "Junior Wordpress Developer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop&crop=face",
+    image: "https://framerusercontent.com/images/7NFaQVF87Qcf7iZD52ee8Q02gcA.jpg?width=3024&height=2759",
   },
 ];
 
@@ -91,7 +151,7 @@ const About = () => {
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
+                  src="https://framerusercontent.com/images/qtcsKLPQgRAhAk0p7PkA5cIyo.png?width=6000&height=4004"
                   alt="Team collaboration"
                   className="w-full h-auto rounded-lg object-cover aspect-[4/3] shadow-2xl"
                 />
@@ -149,7 +209,7 @@ const About = () => {
                 className="lg:order-2"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop"
+                  src="https://framerusercontent.com/images/rA7aZFuPO3WfokCKWVcPXcjKReM.png?width=3600&height=2400"
                   alt="Team working"
                   className="w-full h-auto rounded-lg object-cover aspect-[4/3] shadow-2xl"
                 />
