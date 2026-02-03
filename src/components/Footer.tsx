@@ -139,10 +139,7 @@ const Footer = () => {
                   Created by
                 </span>
                 <Link to="/" className="inline-block">
-                  <span className="text-lg font-semibold tracking-tight text-white">
-                     digni<span className="text-primary italic font-serif">fyd</span>
-                    <span className="text-primary">.</span>
-                  </span>
+                     <img src="/logo.png" alt="dignifyd" className="h-8" />
                 </Link>
               </div>
             </div>

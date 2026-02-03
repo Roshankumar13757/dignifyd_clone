@@ -23,8 +23,8 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center px-4">
           <span className="text-xl font-semibold tracking-tight">
-            digni<span className="text-primary italic font-serif">fyd</span>
-            <span className="text-primary">.</span>
+            <img src="/logo.png" alt="Dignifyd" className="h-8 w-auto" />
+            
           </span>
         </Link>
 
