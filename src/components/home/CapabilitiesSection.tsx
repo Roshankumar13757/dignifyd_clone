@@ -85,82 +85,76 @@ const capabilities = [
 
 const CapabilitiesSection = () => {
   return (
-    <section className="py-24 bg-black text-white relative overflow-hidden">
-      {/* Max width container matching ParallaxVideoSection */}
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="border border-gray-800 rounded-[3rem] p-12 md:p-16">
+    <section className="bg-black text-white relative overflow-hidden py-16 md:py-24">
+      {/* Width matches ParallaxVideoSection */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div
+          className="
+            border border-gray-800
+            rounded-2xl md:rounded-[3rem]
+            p-6 sm:p-10 md:p-16
+          "
+        >
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
           >
-            {/* Capabilities Badge */}
-            <div className="inline-block mb-6">
-              <div 
-                className="px-6 py-3 rounded-full border border-white/10 backdrop-blur-sm"
-                style={{
-                  backgroundColor: 'rgba(13, 13, 13, 0.4)',
-                  borderWidth: '1px',
-                  borderStyle: 'solid',
-                  borderColor: 'rgba(255, 255, 255, 0.1)'
-                }}
-              >
-                <p className="text-sm font-medium tracking-tight" style={{ letterSpacing: '-0.02em' }}>
+            {/* Badge */}
+            <div className="inline-block mb-5 md:mb-6">
+              <div className="px-4 md:px-6 py-2.5 md:py-3 rounded-full border border-white/10 backdrop-blur-sm bg-white/5">
+                <p className="text-xs md:text-sm font-medium tracking-tight">
                   Capabilities
                 </p>
               </div>
             </div>
 
             {/* Title */}
-            <h2 className="text-5xl md:text-6xl font-medium mb-6" style={{ letterSpacing: '-0.05em' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-medium mb-4 md:mb-6 tracking-tight">
               Why leading brands{" "}
-              <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
-                trust
-              </span>{" "}
-              us.
+              <span className="font-serif italic">trust</span> us.
             </h2>
 
             {/* Description */}
-            <p className="text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed" style={{ letterSpacing: '-0.02em', lineHeight: '160%' }}>
-              Once you partner with Dignifyd, execution becomes predictable, scalable, and aligned.
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+              Once you partner with Dignifyd, execution becomes predictable,
+              scalable, and aligned.
             </p>
           </motion.div>
 
           {/* Capabilities Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-12">
             {capabilities.map((cap, index) => (
               <motion.div
                 key={cap.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.08 }}
                 className="text-center"
               >
                 {/* Icon */}
-                <div className="flex justify-center mb-6">
-                  <div className="text-teal-500">
-                    {cap.icon}
-                  </div>
+                <div className="flex justify-center mb-5 md:mb-6 text-teal-500">
+                  {cap.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-medium mb-3 text-white" style={{ letterSpacing: '-0.02em' }}>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-medium mb-2 md:mb-3">
                   {cap.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto" style={{ letterSpacing: '-0.02em', lineHeight: '140%' }}>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
                   {cap.description}
                 </p>
               </motion.div>
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -168,9 +162,18 @@ const CapabilitiesSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-center"
           >
-            <Link 
-              to="/about" 
-              className="inline-block px-10 py-4 bg-teal-600 hover:bg-teal-700 rounded-full text-white text-lg font-light transition-colors duration-300"
+            <Link
+              to="/about"
+              className="
+                inline-block
+                px-8 md:px-10
+                py-3 md:py-4
+                bg-teal-600 hover:bg-teal-700
+                rounded-full
+                text-base md:text-lg
+                font-light
+                transition-colors duration-300
+              "
             >
               About Us
             </Link>

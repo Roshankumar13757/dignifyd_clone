@@ -137,11 +137,21 @@ const ApproachSection = () => {
               <p className="text-gray-400">
                 We refine continuously using performance data and feedback loops.
               </p>
+              
+              {/* Mobile CTA Button - Only visible on mobile */}
+              <div className="md:hidden mt-8">
+                <Link 
+                  to="/contact" 
+                  className="inline-block w-full px-8 py-3 bg-teal-600 hover:bg-teal-700 rounded-full text-white text-base font-medium transition-all duration-300"
+                >
+                  Schedule a Strategy Call
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="text-center">
+          {/* Desktop CTA Button - Hidden on mobile */}
+          <div className="text-center hidden md:block">
             <Link 
               to="/contact" 
               className="inline-block px-10 py-4 bg-teal-600 hover:bg-teal-700 rounded-full text-white text-lg font-light transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-teal-600/25"

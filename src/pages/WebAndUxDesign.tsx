@@ -7,253 +7,200 @@ const WebAndUxDesign = () => {
     <div className="min-h-screen bg-black">
       <Navbar />
 
-{/* Hero Section */}
-<section className="relative pt-32 pb-20 bg-gradient-to-br from-teal-900 via-teal-950 to-black min-h-[70vh] flex items-center justify-center overflow-hidden">
-  {/* Black fade from bottom */}
-  <div 
-    className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-    style={{
-      background: 'linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
-    }}
-  />
-  
-  <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-    <motion.h1
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white mb-8"
-      style={{ letterSpacing: '-0.05em', lineHeight: '1.1em' }}
-    >
-      <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
-        Designing
-      </span>
-      <br />
-      <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
-        Websites That
-      </span>
-      <br />
-      <span className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>
-        Perform
-      </span>
-    </motion.h1>
+      {/* ================= HERO SECTION ================= */}
+      <section className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 bg-gradient-to-br from-teal-900 via-teal-950 to-black min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute bottom-0 left-0 right-0 h-24 sm:h-32 bg-gradient-to-t from-black to-transparent pointer-events-none" />
 
-    <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-      className="text-gray-300 text-base md:text-lg max-w-5xl mx-auto leading-relaxed"
-      style={{ letterSpacing: '-0.02em', lineHeight: '160%' }}
-    >
-      We craft purposeful digital experiences that are visually stunning, intuitively usable, and strategically built to help brands convert visitors into loyal customers. Combining research-driven UX, beautiful UI, and modern technologies, our designs don't just look great — they <em className="font-serif italic" style={{ fontFamily: 'Baskervville, serif' }}>perform</em>.
-    </motion.p>
-  </div>
-</section>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-white mb-6 sm:mb-8 tracking-tight leading-tight"
+          >
+            <span className="font-serif italic">Designing</span><br />
+            <span className="font-serif italic">Websites That</span><br />
+            <span className="font-serif italic">Perform</span>
+          </motion.h1>
 
-      {/* Web Experiences Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            {/* Images Column */}
-            <motion.div
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-gray-300 text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed"
+          >
+            We craft purposeful digital experiences that are visually stunning,
+            intuitively usable, and strategically built to help brands convert
+            visitors into loyal customers.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* ================= WEB EXPERIENCES ================= */}
+      <section className="py-16 sm:py-20 bg-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.img
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="space-y-6"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop"
-                alt="User Experience"
-                className="w-full h-auto rounded-2xl object-cover shadow-xl"
-              />
-            </motion.div>
+              transition={{ duration: 0.7 }}
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800"
+              className="rounded-2xl shadow-xl"
+              alt="UX Design"
+            />
 
-            {/* Text Column */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="space-y-10"
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="space-y-8"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-4xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.01em' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white tracking-tight">
                 Web Experiences Built With Purpose
               </h2>
 
-              <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  User-Centric Design Approach
-                </h3>
-                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.08em', lineHeight: '150%' }}>
-                  Your website should speak to your audience — not confuse them. Our UX methodology starts with understanding your users and shaping experiences that feel natural and effortless. By creating clear navigation, meaningful interactions, and accessible layouts across devices, we make digital experiences that engage, retain, and build trust.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  Conversion-Focused UX Strategy
-                </h3>
-                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.01em', lineHeight: '150%' }}>
-                  Design for your business goals. Every layout choice we make aims to guide visitors toward action — whether it's lead generation, sales, inquiry submissions, or deeper engagement. Through strategic user flows, visual hierarchy, and behaviour-driven layouts, we help your website become a growth engine.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  Responsive Performance Design
-                </h3>
-                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.01em', lineHeight: '150%' }}>
-                  In today's multi-device world, responsiveness isn't optional — it's foundational. We ensure your site looks sharp and functions flawlessly across desktop, tablet, and mobile. Fast load times, seamless interactions, and adaptive layouts create a consistent brand experience that keeps users coming back.
-                </p>
-              </div>
+              {[
+                {
+                  title: "User-Centric Design Approach",
+                  text: "We begin by understanding your users, shaping intuitive experiences that feel natural and effortless across devices."
+                },
+                {
+                  title: "Conversion-Focused UX Strategy",
+                  text: "Every design choice guides visitors toward meaningful actions that drive growth."
+                },
+                {
+                  title: "Responsive Performance Design",
+                  text: "Flawless performance across desktop, tablet, and mobile — speed and clarity included."
+                }
+              ].map((item) => (
+                <div key={item.title}>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Design Systems Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* ================= DESIGN SYSTEMS ================= */}
+      <section className="py-16 sm:py-20 bg-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Text Column */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="space-y-10 lg:order-1"
+              transition={{ duration: 0.7 }}
+              className="space-y-8"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-4xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.01em' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white tracking-tight">
                 Design Systems That Scale
               </h2>
 
-              <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  Scalable UI Foundations
-                </h3>
-                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.01em', lineHeight: '150%' }}>
-                  Build once, update quickly. Our modular UI systems bring consistency and flexibility to your digital presence, so adding new pages, features, or products becomes faster and cleaner over time.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  Brand-Aligned Digital Interfaces
-                </h3>
-                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.01em', lineHeight: '150%' }}>
-                  Your visual identity should be unmistakable. We blend brand personality with usability, using purposeful typography, colour systems, spacing, and intuitive interaction elements — creating interfaces that feel like you.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                  Collaboration-Ready Design Delivery
-                </h3>
-                <p className="text-gray-400 leading-relaxed" style={{ letterSpacing: '-0.01em', lineHeight: '150%' }}>
-                  Design shouldn't slow development. Our handoff includes detailed documentation, component specs, and asset organization that developers will appreciate — ensuring your vision transitions smoothly from design to launch.
-                </p>
-              </div>
+              {[
+                {
+                  title: "Scalable UI Foundations",
+                  text: "Modular UI systems ensure consistency and faster iteration."
+                },
+                {
+                  title: "Brand-Aligned Interfaces",
+                  text: "Typography, color, and layout aligned perfectly with your identity."
+                },
+                {
+                  title: "Developer-Ready Delivery",
+                  text: "Clean handoffs that accelerate development without friction."
+                }
+              ].map((item) => (
+                <div key={item.title}>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
             </motion.div>
 
-            {/* Images Column */}
-            <motion.div
+            <motion.img
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="lg:order-2"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop"
-                alt="Design Systems"
-                className="w-full h-auto rounded-2xl object-cover shadow-xl"
-              />
-            </motion.div>
+              transition={{ duration: 0.7, delay: 0.1 }}
+              src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800"
+              className="rounded-2xl shadow-xl"
+              alt="Design Systems"
+            />
           </div>
         </div>
       </section>
 
-      {/* What You Get Section */}
-<section className="py-20 bg-black">
-  <div className="max-w-4xl mx-auto px-6">
-    <motion.h2
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="text-4xl md:text-5xl font-light text-center text-white mb-16"
-      style={{ letterSpacing: '-0.05em' }}
-    >
-       <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.02em' }}>
-                What You Get With Our Web & UX Design Service
-              </h2>
-    </motion.h2>
-
-    <div className="space-y-12">
-      {[
-        {
-          title: "Discovery & Strategy",
-          description: "We start by understanding your audience, goals, and brand to define the right UX direction."
-        },
-        {
-          title: "Wireframes & Prototypes",
-          description: "We create skeletal frameworks for all key pages that map user journeys for maximum clarity and efficiency."
-        },
-        {
-          title: "UI Design & Visual Brand Language",
-          description: "Your website's look & feel is crafted with care — ensuring emotional impact without sacrificing clarity or usability."
-        },
-        {
-          title: "Responsive & Accessible Layouts",
-          description: "We design to work beautifully on every device, while prioritising accessibility for all users."
-        },
-        {
-          title: "UX Testing & Iteration",
-          description: "Before launch, we test & refine based on real behaviour to make sure your users find what they need — quickly and successfully."
-        },
-        {
-          title: "Developer-Ready Files",
-          description: "We deliver organised, structured designs that make development faster and error-free."
-        }
-      ].map((item, index) => (
-        <motion.div
-          key={item.title}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center space-y-3"
-        >
-          <h3 className="text-2xl md:text-3xl font-semibold text-white" style={{ letterSpacing: '-0.02em' }}>
-            {item.title}
-          </h3>
-          <p className="text-gray-400 leading-relaxed text-base max-w-3xl mx-auto" style={{ letterSpacing: '-0.01em', lineHeight: '150%' }}>
-            {item.description}
-          </p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
-
-      {/* Why It Matters Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto px-6">
-          <motion.div
+      {/* ================= WHAT YOU GET ================= */}
+      <section className="py-16 sm:py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ duration: 0.7 }}
+            className="text-2xl sm:text-3xl md:text-5xl font-serif italic text-white mb-12 tracking-tight"
           >
-             <h2 className="text-3xl md:text-4xl lg:text-4xl font-serif italic  text-white mb-8 whitespace-nowrap" style={{ fontFamily: 'Baskervville, serif',letterSpacing: '-0.02em' }}>
-                Why It Matters
-              </h2>
-            <p className="text-gray-400 text-base md:text-lg leading-relaxed" style={{ letterSpacing: '-0.02em', lineHeight: '150%' }}>
-              A well-designed website is more than aesthetics — it's an experience. Good design reduces frustration, simplifies decisions, and builds credibility. It turns first-time visitors into advocates and long-term users into loyal customers. With purposeful UX and thoughtful UI, we ensure your brand delivers <em>impactful digital experiences</em> that last.
-            </p>
-          </motion.div>
+            What You Get With Our Web & UX Design Service
+          </motion.h2>
+
+          <div className="space-y-10">
+            {[
+              "Discovery & Strategy",
+              "Wireframes & Prototypes",
+              "UI Design & Visual Brand Language",
+              "Responsive & Accessible Layouts",
+              "UX Testing & Iteration",
+              "Developer-Ready Files"
+            ].map((title, index) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white mb-2">
+                  {title}
+                </h3>
+                <p className="text-gray-400 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto">
+                  Designed to ensure clarity, performance, and long-term scalability.
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= WHY IT MATTERS ================= */}
+      <section className="py-16 sm:py-20 bg-black">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-white mb-6 tracking-tight"
+          >
+            Why It Matters
+          </motion.h2>
+
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
+            A well-designed website builds trust, reduces friction, and turns
+            visitors into advocates. Thoughtful UX and purposeful UI create
+            digital experiences that drive lasting impact.
+          </p>
         </div>
       </section>
 
