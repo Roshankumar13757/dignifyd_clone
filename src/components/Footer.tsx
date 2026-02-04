@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const footerRef = useRef(null);
@@ -27,8 +28,14 @@ const Footer = () => {
       videoRef.current.play().catch(() => {});
     }
   }, []);
+  const footerLinks = [
+            { label: "Home", path: "/" },
+            { label: "About", path: "/about" },
+            { label: "Contact Us", path: "/contact" },  
+            ];
 
   return (
+    
     <div ref={footerRef} className="relative">
       {/* Scroll spacer */}
       <div className="h-screen" />
@@ -106,19 +113,21 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            {/* Bottom Bar */}
-            <div className="bg-black w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
-              {/* Links */}
+            
+            <div className=" w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
               <div className="flex flex-wrap gap-5 justify-center md:justify-start">
-                {["Home", "About", "Portfolio", "Contact Us"].map((item) => (
-                  <Link
-                    key={item}
-                    to="/"
-                    className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                {footerLinks.map((link) => (
+                  <NavLink
+                    key={link.label}
+                    to={link.path}
+                    className={({ isActive }) =>
+                      `text-sm font-medium transition-colors ${
+                        isActive ? "text-white" : "text-gray-400 hover:text-white"
+                      }`
+                    }
                   >
-                    {item}
-                  </Link>
+                    {link.label}
+                  </NavLink>
                 ))}
               </div>
 
